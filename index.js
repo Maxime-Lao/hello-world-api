@@ -9,11 +9,11 @@ const server = http.createServer((req, res) => {
   const method = req.method.toUpperCase();
   res.setHeader('Content-Type', 'application/json');
   res.writeHead(200, 'request is good');
-  if (method === 'POST') {
-    const response = JSON.stringify({ message: 'Hello World!' });
+  if (method === 'GET') {
+    const response = JSON.stringify({ message: 'Maxime Lao et Muthulan Mohanadas 5IW2 Groupe 7 !' });
     res.end(response);
   } else {
-    const response = JSON.stringify({ message: 'You need to send a POST request to get the appropriate response' });
+    const response = JSON.stringify({ message: 'You need to send a get request to get the appropriate response' });
     res.end(response);
   }
 });
